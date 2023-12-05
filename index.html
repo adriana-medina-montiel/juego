@@ -1,0 +1,51 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgb(255, 207, 207);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: wheat;
+            margin: 0;
+        }
+        .container {
+            width: 80%;
+            text-align: center;
+            background-color: rgb(176, 151, 182);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        canvas {
+            border: 2px solid wheat;
+        }
+
+        .snake-segment {
+            transition: transform 0.2s ease-in-out; /* Cambia la propiedad que desees */
+        }
+        
+        .food-item {
+            transition: transform 0.3s ease-in-out; /* Por ejemplo, una transición de escala */
+        }
+        .food-item.eaten {
+            transform: scale(0); /* Escala la comida a 0 para simular su desaparición */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Gráficos en 2D con HTML y JavaScript</h1>
+        <h2>Se ha comido <span id="score">0</span> insectos</h2>
+        <canvas id="lienzo" width="600" height="400"></canvas>
+    </div>
+    <script src="./snake.js"></script>
+</body>
+</html>
